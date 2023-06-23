@@ -1,0 +1,22 @@
+{
+  "name": "qatest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^8.11.2",
+    "chai": "^4.3.7",
+    "chromedriver": "^114.0.2",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "selenium-webdriver": "^4.10.0",
+    "webdriver": "^8.11.1",
+    "webdriverio": "^7.31.1"
+  }
+}
