@@ -7,14 +7,21 @@ async function loginPageAutomation() {
   try {
     await driver.get("https://sakshingp.github.io/assignment/login.html");
 
+   
     // Login Page automation
-    await driver.findElement(By.id("username")).sendKeys("your-username");
-    await driver.findElement(By.id("password")).sendKeys("your-password");
+    await driver.findElement(By.id("username")).sendKeys("abhay");
+    await driver.findElement(By.id("password")).sendKeys("abhay123");
 
     // Wait for the login button to be clickable
     await driver.wait(until.elementIsEnabled(driver.findElement(By.id("log-in"))));
 
     await driver.findElement(By.id("log-in")).click();
+
+    // Wait for the Home Page to load
+    await driver.wait(until.elementLocated(By.css('.content-w')), 5000); // Increase the wait time if needed
+
+    // Perform tests on the login page
+    await testLoginPage(driver);
 
     // Wait for the Home Page to load
     console.log("⏳ Waiting for the Home Page to load...");
@@ -67,5 +74,25 @@ function parseAmountValue(amountValue) {
   // Parse the numeric value and return as a number
   return parseFloat(numericValue);
 }
+async function testLoginPage(driver) {
+  // Check if the login was successful by verifying the presence of elements on the home page
+  const contentWrapper = await driver.findElement(By.css(".content-w"));
+  if (contentWrapper) {
+    console.log("✅ Login Successful");
+  } else {
+    console.log("❌ Login Failed");
+  }
+
+  // Check if the user is redirected to the correct page after login
+  const currentUrl = await driver.getCurrentUrl();
+  if (currentUrl === "https://sakshingp.github.io/assignment/home.html") {
+    console.log("✅ Redirected to Home Page");
+  } else {
+    console.log("❌ Redirection Failed");
+  }
+
+  // Add more tests as needed...
+}
+
 
 loginPageAutomation();
