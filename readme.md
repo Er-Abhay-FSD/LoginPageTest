@@ -1,6 +1,6 @@
 # Login Page Automation
 
-![Automation](automation.png)
+![Automation](code.png)
 
 > A Node.js script for automating the login process and validating transaction amounts on a web page using Selenium WebDriver.
 
