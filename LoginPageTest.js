@@ -126,6 +126,12 @@ async function testLoginPage(driver) {
     // Remove the "alert" class and add the random class
     await driver.executeScript(`arguments[0].classList.remove('alert');`, element);
     await driver.executeScript(`arguments[0].classList.add('${randomClass}');`, element);
+
+    // Get the alert message text
+    const alertMessage = await element.getText();
+    
+    // Print the alert message with emoji
+    console.log("⚠️ Alert Message: " + alertMessage);
   }
 
   // Define the login function to be executed in the browser context
@@ -147,7 +153,7 @@ async function testLoginPage(driver) {
       if (username === "" && password === "") {
         alertElements.forEach(function(element) {
           element.style.display = "block";
-          element.innerText = "Both Username and Password must be present";
+          element.innerText = "⚠️ Both Username and Password must be present";
           element.classList.remove("alert-success", "alert-info", "alert-warning");
           element.classList.add("alert-danger");
         });
@@ -157,7 +163,7 @@ async function testLoginPage(driver) {
       if (username === "" && password !== "") {
         alertElements.forEach(function(element) {
           element.style.display = "block";
-          element.innerText = "Username must be present";
+          element.innerText = "⚠️ Username must be present";
           element.classList.remove("alert-success", "alert-info", "alert-danger");
           element.classList.add("alert-warning");
         });
@@ -167,7 +173,7 @@ async function testLoginPage(driver) {
       if (username !== "" && password === "") {
         alertElements.forEach(function(element) {
           element.style.display = "block";
-          element.innerText = "Password must be present";
+          element.innerText = "⚠️ Password must be present";
           element.classList.remove("alert-success", "alert-info", "alert-warning");
           element.classList.add("alert-danger");
         });
