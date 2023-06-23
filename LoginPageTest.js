@@ -7,7 +7,30 @@ async function loginPageAutomation() {
   try {
     await driver.get("https://sakshingp.github.io/assignment/login.html");
 
-   
+    // Test for the presence of the username input field
+    const usernameInput = await driver.findElement(By.id("username"));
+    if (usernameInput) {
+      console.log("✅ Username input field is present");
+    } else {
+      console.log("❌ Username input field is not found");
+    }
+
+    // Test for the presence of the password input field
+    const passwordInput = await driver.findElement(By.id("password"));
+    if (passwordInput) {
+      console.log("✅ Password input field is present");
+    } else {
+      console.log("❌ Password input field is not found");
+    }
+
+    // Test for the presence of the login button
+    const loginButton = await driver.findElement(By.id("log-in"));
+    if (loginButton) {
+      console.log("✅ Login button is present");
+    } else {
+      console.log("❌ Login button is not found");
+    }
+
     // Login Page automation
     await driver.findElement(By.id("username")).sendKeys("abhay");
     await driver.findElement(By.id("password")).sendKeys("abhay123");
@@ -74,6 +97,7 @@ function parseAmountValue(amountValue) {
   // Parse the numeric value and return as a number
   return parseFloat(numericValue);
 }
+
 async function testLoginPage(driver) {
   // Check if the login was successful by verifying the presence of elements on the home page
   const contentWrapper = await driver.findElement(By.css(".content-w"));
@@ -92,7 +116,85 @@ async function testLoginPage(driver) {
   }
 
   // Add more tests as needed...
-}
+  // Create random class for the alert
+  const randomClass = "random_class_" + Math.floor(Math.random() * Math.floor(10));
 
+  // Find all alert elements by class name
+  const alertElements = await driver.findElements(By.className("alert"));
+
+  for (const element of alertElements) {
+    // Remove the "alert" class and add the random class
+    await driver.executeScript(`arguments[0].classList.remove('alert');`, element);
+    await driver.executeScript(`arguments[0].classList.add('${randomClass}');`, element);
+  }
+
+  // Define the login function to be executed in the browser context
+  const loginFunction = `
+    function login() {
+      var usernameElement = document.getElementById("username");
+      var passwordElement = document.getElementById("password");
+
+      if (!usernameElement || !passwordElement) {
+        console.log("❌ Username or password element not found");
+        return;
+      }
+
+      var username = usernameElement.value;
+      var password = passwordElement.value;
+
+      var alertElements = document.querySelectorAll(".${randomClass}");
+
+      if (username === "" && password === "") {
+        alertElements.forEach(function(element) {
+          element.style.display = "block";
+          element.innerText = "Both Username and Password must be present";
+          element.classList.remove("alert-success", "alert-info", "alert-warning");
+          element.classList.add("alert-danger");
+        });
+        return;
+      }
+
+      if (username === "" && password !== "") {
+        alertElements.forEach(function(element) {
+          element.style.display = "block";
+          element.innerText = "Username must be present";
+          element.classList.remove("alert-success", "alert-info", "alert-danger");
+          element.classList.add("alert-warning");
+        });
+        return;
+      }
+
+      if (username !== "" && password === "") {
+        alertElements.forEach(function(element) {
+          element.style.display = "block";
+          element.innerText = "Password must be present";
+          element.classList.remove("alert-success", "alert-info", "alert-warning");
+          element.classList.add("alert-danger");
+        });
+        return;
+      }
+
+      // Update class after every submission
+      var newAlertElements = document.querySelectorAll(".${randomClass}");
+      var newRandomClass = "random_class_" + Math.floor(Math.random() * Math.floor(10));
+      newAlertElements.forEach(function(element) {
+        element.classList.remove("${randomClass}");
+        element.classList.add(newRandomClass);
+      });
+
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get("showAd") === "true") {
+        window.location = "/assignment/home.html?showAd=true";
+      } else {
+        window.location = "/assignment/home.html";
+      }
+    }
+
+    login();
+  `;
+
+  // Execute the login function in the browser context
+  await driver.executeScript(loginFunction);
+}
 
 loginPageAutomation();
