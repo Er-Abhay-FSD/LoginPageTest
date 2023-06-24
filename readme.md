@@ -1,7 +1,5 @@
 ### Cypress test
 [![Video Cypress Test](cypress1.png)](cyTest/cypress/videos/spec.cy.js.mp4)
-
-![Image](cypress1.p
 # run command
 npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
 
