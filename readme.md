@@ -1,3 +1,8 @@
+### Cypress test
+![Image](cypress1.png)
+
+![Image](cypress2.png)
+### selenium test
 ![Image](code.png)
 
 # Login Page Automation
