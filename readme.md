@@ -2,14 +2,32 @@
 
 # Login Page Automation
 
-
-> A Node.js script for automating the login process and validating transaction amounts on a web page using Selenium WebDriver.
+> A Node.js script and Cypress code for automating the login process and validating transaction amounts on a web page.
 
 ## Description
 
-This script demonstrates how to automate the login process and perform validation on transaction amounts using Selenium WebDriver in Node.js. It opens a web page, enters login credentials, navigates to the home page, clicks on the "AMOUNT" header in the transaction table, retrieves the transaction amounts, and checks if the amounts are sorted in ascending order.
+This project provides two automation approaches for testing the login page and validating transaction amounts on a web page. 
 
-The script utilizes the `selenium-webdriver` package to interact with the web page and perform various actions such as entering text, clicking elements, and waiting for elements to load. It also uses the `chromedriver` package to drive the Chrome browser.
+The `LoginPageTest.js` script demonstrates how to automate the login process and perform validation using Selenium WebDriver in Node.js.
+
+The `cypressLogin.spec.js` file contains the Cypress code for automating the login process and performing validation using Cypress.
+
+Both approaches open a web page, enter login credentials, navigate to the home page, click on the "AMOUNT" header in the transaction table, retrieve the transaction amounts, and check if the amounts are sorted in ascending order.
+
+## Prerequisites
+
+- Node.js (v12 or higher) for running the `LoginPageTest.js` script.
+- Chrome browser for running the `LoginPageTest.js` script.
+- Cypress installed for running the Cypress code.
+
+## Installation
+
+### Node.js and Selenium WebDriver
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Er-Abhay-FSD/LoginPageTest.git
 
 ## Prerequisites
 
