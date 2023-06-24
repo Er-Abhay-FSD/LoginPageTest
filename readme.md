@@ -1,34 +1,30 @@
-## Cypress E2E Setup with Node.js
+# Cypress and Selenium E2E Setup with Node.js
 
-This project uses Cypress for end-to-end (E2E) testing. Follow the steps below to set up and run the Cypress tests.
+This project uses Cypress and Selenium for end-to-end (E2E) testing. Follow the steps below to set up and run the tests using both frameworks.
 
-### Prerequisites
+## Prerequisites
 
 - Node.js should be installed on your machine.
 
-### Installation
+## Installation
 
-Install Cypress as a dev dependency using npm:
- ```bash
- npm install cypress --save-dev
- ```
- 
-
-
+Install Cypress and Selenium as dev dependencies using npm:
+```bash
+npm install cypress --save-dev
+npm install selenium-webdriver --save-dev
+```
 ### Project Setup
-
 To set up the Cypress project, run the following command:
 ```bash
 npx cypress open
 ```
-
 This will create the necessary Cypress files and open the Cypress Test Runner.
-
 
 ### Running Tests
 To run the Cypress tests, you can use the following command:
-
-
+```bash
+npx cypress run
+```
 ### Cypress test
 # Click img to see result
 [![Video Name](cypress1.png)](https://drive.google.com/file/d/1SMuff8j3EVy6pzTRpJG_n6CHyfqFLGFb/view?usp=sharing)
@@ -40,6 +36,25 @@ To run the Cypress tests, you can use the following command:
 To run the Cypress tests, you can use the following command:
 
 ![Image](cypress2.png)
+
+### Writing Tests
+
+Cypress tests can be written in JavaScript or TypeScript. Here's a basic example of a test:
+
+```javascript
+describe('My First Test', () => {
+  it('Visits the home page', () => {
+    cy.visit('/')
+    cy.contains('Welcome to my website')
+  })
+})
+```
+
+## run command
+1. Run Command:
+ ```bash
+npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
+```
 ### selenium test
 ![Image](code.png)
 
@@ -54,14 +69,6 @@ This project provides two automation approaches for testing the login page and v
 The `LoginPageTest.js` script demonstrates how to automate the login process and perform validation using Selenium WebDriver in Node.js.
 
 The `cypressLogin.spec.js` file contains the Cypress code for automating the login process and performing validation using Cypress.
-
-## run command
-1. Run Command:
- ```bash
-npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
-```
- 
-
 Both approaches open a web page, enter login credentials, navigate to the home page, click on the "AMOUNT" header in the transaction table, retrieve the transaction amounts, and check if the amounts are sorted in ascending order.
 
 ## Prerequisites
@@ -97,15 +104,3 @@ Emojis Used
 🔢 - Indicates the sorted amounts.
 👋 - Indicates the script is quitting.
 🌐 - Indicates the browser is closed.
-
-### Writing Tests
-
-Cypress tests can be written in JavaScript or TypeScript. Here's a basic example of a test:
-
-```javascript
-describe('My First Test', () => {
-  it('Visits the home page', () => {
-    cy.visit('/')
-    cy.contains('Welcome to my website')
-  })
-})
