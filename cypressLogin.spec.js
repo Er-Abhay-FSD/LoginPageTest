@@ -73,7 +73,7 @@ describe("✅Login Page Automation", () => {
       cy.log("✅ Login Successful");
     });
 
-    // Check if the user is redirected to the correct page after login
+    // Check if  user is redirected to the correct page after login
     cy.url().should("eq", "https://sakshingp.github.io/assignment/home.html");
     cy.log("✅ Redirected to Home Page");
   }
