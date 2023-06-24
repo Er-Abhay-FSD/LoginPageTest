@@ -35,17 +35,6 @@ npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
 ![IMG Name](cypress2.png)
 # Vs Code Img
 ![Img Name](cypress3.png)]
-### Writing Tests
-
-Cypress tests can be written in JavaScript or TypeScript. Here's a basic example of a test:
-
-```javascript
-describe('My First Test', () => {
-  it('Visits the home page', () => {
-    cy.visit('/')
-    cy.contains('Welcome to my website')
-  })
-})```
 ### Running Tests
 To run the Cypress tests, you can use the following command:
 
@@ -101,3 +90,14 @@ Emojis Used
 👋 - Indicates the script is quitting.
 🌐 - Indicates the browser is closed.
 
+### Writing Tests
+
+Cypress tests can be written in JavaScript or TypeScript. Here's a basic example of a test:
+
+```javascript
+describe('My First Test', () => {
+  it('Visits the home page', () => {
+    cy.visit('/')
+    cy.contains('Welcome to my website')
+  })
+})
