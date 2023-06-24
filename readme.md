@@ -19,17 +19,16 @@ To set up the Cypress project, run the following command:
 npx cypress open
 ```
 This will create the necessary Cypress files and open the Cypress Test Runner.
-
 ### Running Tests
 To run the Cypress tests, you can use the following command:
 ```bash
 npx cypress run
 ```
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Cypress test
 Click 🎥 img to see result
 [![Video Name](cypress1.png)](https://drive.google.com/file/d/1SMuff8j3EVy6pzTRpJG_n6CHyfqFLGFb/view?usp=sharing)
-
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ![IMG Name](cypress2.png)
 # Vs Code Img
 ![Img Name](cypress3.png)]
