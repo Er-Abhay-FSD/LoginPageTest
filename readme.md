@@ -25,7 +25,7 @@ To run the Cypress tests, you can use the following command:
 npx cypress run
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### Cypress test
+### Cypress test:arrow_down
 Click 🎥 img to see result
 [![Video Name](cypress1.png)](https://drive.google.com/file/d/1SMuff8j3EVy6pzTRpJG_n6CHyfqFLGFb/view?usp=sharing)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
