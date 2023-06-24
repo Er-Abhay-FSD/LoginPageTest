@@ -1,5 +1,8 @@
 ### Cypress test
 ![Image](cypress1.png)
+# run command
+npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
+
 
 ![Image](cypress2.png)
 ### selenium test
