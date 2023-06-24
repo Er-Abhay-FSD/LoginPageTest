@@ -1,9 +1,50 @@
+## Cypress E2E Setup with Node.js
+
+This project uses Cypress for end-to-end (E2E) testing. Follow the steps below to set up and run the Cypress tests.
+
+### Prerequisites
+
+- Node.js should be installed on your machine.
+
+### Installation
+
+Install Cypress as a dev dependency using npm:
+
+# npm install cypress --save-dev
+
+
+### Project Setup
+
+To set up the Cypress project, run the following command:
+
+# npx cypress open
+
+This will create the necessary Cypress files and open the Cypress Test Runner.
+
+
+### Running Tests
+To run the Cypress tests, you can use the following command:
+
+
 ### Cypress test
-[![Video Name](cypress1.png)](cyTest/cypress/videos/spec.cy.js.mp4)
+Click img to see result
+[![Video Name](cypress1.png)](https://drive.google.com/file/d/1SMuff8j3EVy6pzTRpJG_n6CHyfqFLGFb/view?usp=sharing)
 
 # run command
 npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
+### Writing Tests
 
+Cypress tests can be written in JavaScript or TypeScript. Here's a basic example of a test:
+
+```javascript
+describe('My First Test', () => {
+  it('Visits the home page', () => {
+    cy.visit('/')
+    cy.contains('Welcome to my website')
+  })
+})
+### Running Tests
+To run the Cypress tests, you can use the following command:
 
 ![Image](cypress2.png)
 ### selenium test
@@ -43,26 +84,6 @@ Both approaches open a web page, enter login credentials, navigate to the home p
 - Node.js (v12 or higher)
 - Chrome browser
 
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Er-Abhay-FSD/LoginPageTest/tree/main
-
-2.Install the dependencies:
-```bash
-npm install
-### Usage
-1.Update the login credentials:
-
-Open LoginPageTest.js and replace "abhay" and "abhay123" with your actual login credentials.
-
-2.Run the script:
-
- ```bash
- node LoginPageTest.js
-
 ### View the console output:
 
 The script will log the progress and results of each step with proper emojis for clarity. The console output will display information such as the loading status of the home page, the click action on the "AMOUNT" header, the retrieval of transaction amounts, the sorting status of the amounts, and the sorted amounts.
@@ -76,3 +97,4 @@ Emojis Used
 🔢 - Indicates the sorted amounts.
 👋 - Indicates the script is quitting.
 🌐 - Indicates the browser is closed.
+
