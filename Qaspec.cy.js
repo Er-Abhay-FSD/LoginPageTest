@@ -1,4 +1,4 @@
-describe("Login Page Automation", () => {
+describe("✅Login Page Automation", () => {
   it("should login and perform required tests", () => {
     cy.visit("https://sakshingp.github.io/assignment/login.html");
 
