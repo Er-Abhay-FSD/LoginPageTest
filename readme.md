@@ -30,9 +30,6 @@ To run the Cypress tests, you can use the following command:
 # Click img to see result
 [![Video Name](cypress1.png)](https://drive.google.com/file/d/1SMuff8j3EVy6pzTRpJG_n6CHyfqFLGFb/view?usp=sharing)
 
-## run command
-# npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
-
 ![IMG Name](cypress2.png)
 # Vs Code Img
 ![Img Name](cypress3.png)]
@@ -54,6 +51,14 @@ This project provides two automation approaches for testing the login page and v
 The `LoginPageTest.js` script demonstrates how to automate the login process and perform validation using Selenium WebDriver in Node.js.
 
 The `cypressLogin.spec.js` file contains the Cypress code for automating the login process and performing validation using Cypress.
+
+## run command
+1. Run Command:
+ ```bash
+npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
+exit
+
+ 
 
 Both approaches open a web page, enter login credentials, navigate to the home page, click on the "AMOUNT" header in the transaction table, retrieve the transaction amounts, and check if the amounts are sorted in ascending order.
 
