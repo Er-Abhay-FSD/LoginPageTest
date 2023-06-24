@@ -27,11 +27,14 @@ To run the Cypress tests, you can use the following command:
 
 
 ### Cypress test
-Click img to see result
+# Click img to see result
 [![Video Name](cypress1.png)](https://drive.google.com/file/d/1SMuff8j3EVy6pzTRpJG_n6CHyfqFLGFb/view?usp=sharing)
 
 # run command
 npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
+![IMG Name](cypress2.png)
+# Vs Code Img
+![Img Name](cypress3.png)]
 ### Writing Tests
 
 Cypress tests can be written in JavaScript or TypeScript. Here's a basic example of a test:
