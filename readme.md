@@ -56,8 +56,7 @@ The `cypressLogin.spec.js` file contains the Cypress code for automating the log
 1. Run Command:
  ```bash
 npx cypress run --record --key 1e404298-76fd-4194-9869-bc3cdec6776b
-exit
-
+```
  
 
 Both approaches open a web page, enter login credentials, navigate to the home page, click on the "AMOUNT" header in the transaction table, retrieve the transaction amounts, and check if the amounts are sorted in ascending order.
@@ -76,7 +75,7 @@ Both approaches open a web page, enter login credentials, navigate to the home p
 
    ```bash
    git clone https://github.com/Er-Abhay-FSD/LoginPageTest.git
-
+   ```
 ## Prerequisites
 
 - Node.js (v12 or higher)
