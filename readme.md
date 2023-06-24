@@ -42,7 +42,7 @@ describe('My First Test', () => {
     cy.visit('/')
     cy.contains('Welcome to my website')
   })
-})
+})```
 ### Running Tests
 To run the Cypress tests, you can use the following command:
 
