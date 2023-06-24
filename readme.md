@@ -9,15 +9,18 @@ This project uses Cypress for end-to-end (E2E) testing. Follow the steps below t
 ### Installation
 
 Install Cypress as a dev dependency using npm:
-
-# npm install cypress --save-dev
+ ```bash
+ npm install cypress --save-dev
+ ```
+ 
 
 
 ### Project Setup
 
 To set up the Cypress project, run the following command:
-
-# npx cypress open
+```bash
+npx cypress open
+```
 
 This will create the necessary Cypress files and open the Cypress Test Runner.
 
